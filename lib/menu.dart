@@ -13,9 +13,9 @@ class MyHomePage extends StatelessWidget {
   // always marked "final".
 
   final List<ShopItem> items = [
-    ShopItem("Lihat Item", Icons.checklist,Colors.pink[50]!),
-    ShopItem("Tambah Item", Icons.add_shopping_cart,Colors.pink[400]!),
-    ShopItem("Logout", Icons.logout, Colors.pink[800]!),
+    ShopItem("Lihat Item", Icons.checklist,Color.fromARGB(255, 67, 61, 236)!),
+    ShopItem("Tambah Item", Icons.add_shopping_cart,Color.fromARGB(255, 70, 26, 156)!),
+    ShopItem("Logout", Icons.logout,  Color.fromARGB(255, 40, 20, 173)!),
   ];
 
   @override
