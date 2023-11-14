@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:barang_gelap/menu.dart';
+import 'package:barang_gelap/screens/menu.dart';
+import 'package:barang_gelap/models/items_model.dart';
+
+
+List<Product> products = [];
 
 void main() {
   runApp(const MyApp());
@@ -30,11 +34,10 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        scaffoldBackgroundColor: const Color(0xFFFEFAF1),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: MyHomePage()
     );
   }
 }
-
-
