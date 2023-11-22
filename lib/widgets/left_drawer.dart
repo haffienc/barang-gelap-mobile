@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:barang_gelap/main.dart';
 import 'package:barang_gelap/screens/menu.dart';
 import 'package:barang_gelap/screens/shoplist_form.dart';
-import 'package:barang_gelap/screens/shoplist_items.dart';
+import 'package:barang_gelap/screens/list_product.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -19,7 +18,7 @@ class LeftDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Shopping List',
+                  'Barang Gelap',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
@@ -52,19 +51,19 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.checklist),
-            title: const Text('Lihat Produk'),
-            // Bagian redirection ke MyHomePage
-            onTap: () 
-                  {
-                Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ProductListPage(products: products)));
-              }
-            ,
+              leading: const Icon(Icons.shopping_basket),
+              title: const Text('Daftar Item'),
+              onTap: () {
+                  // Route menu ke halaman produk
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductPage()),
+                  );
+              },
           ),
           ListTile(
             leading: const Icon(Icons.add_shopping_cart),
-            title: const Text('Tambah Produk'),
+            title: const Text('Tambah Item'),
             // Bagian redirection ke ShopFormPage
             onTap: () {
                 Navigator.push(context,
